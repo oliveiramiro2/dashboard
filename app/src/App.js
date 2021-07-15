@@ -1,19 +1,23 @@
 import { Provider } from 'react-redux'
+import store from './store/store'
+import React from 'react'
 
-import store from './store/index'
+import HeaderSearch from './componentes/HeaderSearch'
+import DashBoardAcoes from './componentes/DashBoardAcoes'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <Provider store={store}>
-          <p>
-            ok
-          </p>
-        </Provider>
-      </header>
-    </div>
-  );
+export default class App extends React.Component {
+  
+  render(){
+    return (
+      <div className="App">
+        <header className="App-header">
+          <Provider store={store}>
+            <HeaderSearch />
+            <DashBoardAcoes />
+          </Provider>
+        </header>
+      </div>
+    );
+  }
+  
 }
-
-export default App;

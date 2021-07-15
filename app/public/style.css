@@ -1,0 +1,33 @@
+body{
+    background-color: aliceblue;
+}
+
+.form-search {
+    margin-top: 2%;
+}
+
+.ipt-search {
+    width: 70%;
+    display: inline;
+    margin-right: 15px;
+}
+
+.pesquise-lb {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: auto 15px;
+    font-size: 20px;
+}
+
+.btn-search {
+    margin-bottom: 5px;
+}
+
+.recharts-wrapper{
+    margin-top: 50px;
+    padding-left: 22%;
+}
+
+.recharts-surface {
+    background-color: rgba(204, 204, 204, 0.37);
+    border: 1px dashed black;
+}
