@@ -1,18 +1,21 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import React from 'react'
+import { connect, useSelector } from 'react-redux'
 
 import axios from 'axios'
 
 import { changeCompany } from './../store/actions/TrocaEmpresa'
 
-export class HeaderSearch extends Component {
-    loadCompany = (e) => {
+const HeaderSearch = ({informacoes}) => {
+    const inf = useSelector(state => state)
+    const loadCompany = (e) => {
         try{
             const url= 'https://cloud.iexapis.com/v1/stock/'+e.target.value+'/quote/?token=pk_c778b6dbd2154d6fa15043568d469931'
             axios.get(url)
                 .then(res =>{
                     //const info = res.data
-                    changeCompany(this.state.informacoes) 
+                    changeCompany(res.data)
+                    console.log(res.data) 
+                    console.log(informacoes)
                 })
             
         }catch{
@@ -20,25 +23,16 @@ export class HeaderSearch extends Component {
        }
     }
 
-    render() {
-        return (
-            <div className="form-group form-search">
-                <form>
-                    <label className="pesquise-lb"><strong>Pesquise aqui</strong></label>
-                    <input type="search" className="form-control ipt-search" id="exampleFormControlInput1" placeholder="Ex: aapl" />
-                    <button type="submit" className="btn btn-info btn-search">Pesquisar</button>
-                </form>
-            </div>
-        )
-    }
+    console.log(inf.informacoes)
+    return (
+        <div className="form-group form-search">
+            <form>
+                <label className="pesquise-lb"><strong>Pesquise aqui</strong></label>
+                <input type="search" onChange={(e)=>loadCompany(e)} className="form-control ipt-search" id="exampleFormControlInput1" placeholder="Ex: aapl" />
+                <button type="submit" className="btn btn-info btn-search">Pesquisar</button>
+            </form>
+        </div>
+    )
 }
 
-const mapStateToProps = (state) => ({
-    informacao : state.valoresReducer
-})
-
-const mapDispatchToProps = () => ({
-
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(HeaderSearch)
+export default connect(state => ({informacoes:state.informacoes}))(HeaderSearch)
