@@ -1,5 +1,4 @@
 import React from 'react'
-<<<<<<< HEAD
 import { connect } from 'react-redux'
 
 import { changeCompany } from './../store/actions/TrocaEmpresa'
@@ -20,34 +19,6 @@ const HeaderSearch = ({changeCompany}) => {
         e.preventDefault(()=>{
             changeCompany(`https://cloud.iexapis.com/v1/stock/${company}/quote/?token=pk_c778b6dbd2154d6fa15043568d469931`)
         })
-=======
-import { connect, useSelector, useDispatch } from 'react-redux'
-
-import axios from 'axios'
-
-import { changeCompany } from './../store/actions/TrocaEmpresa'
-
-const HeaderSearch = ({informacoes}) => {
-    const dispatch = useDispatch()
-    const inf = useSelector(state => state)
-    const loadCompany = (e) => {
-        if(e.target.value !== ''){
-            try{
-                const url= 'https://cloud.iexapis.com/v1/stock/'+e.target.value+'/quote/?token=pk_c778b6dbd2154d6fa15043568d469931'
-                axios.get(url)
-                    .then(res =>{
-                        //const info = res.data
-                        dispatch(changeCompany(res.data))
-                        console.log(res.data) 
-                        console.log(informacoes.then(info => info.results))
-                    })
-                
-            }catch{
-                console.log('deu ruim')
-            }
-        }
-        
->>>>>>> 6971c093d2c49b3b4138e3772c5aacfa9d8afc4d
     }
 
     console.log('header', symbolCompany)

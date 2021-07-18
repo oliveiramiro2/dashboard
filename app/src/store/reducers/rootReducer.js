@@ -1,8 +1,7 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { combineReducers } from 'redux'
+
 import valoresReducer from './valores'
 
-export default configureStore({
-   reducer: {
-      informacoes: valoresReducer
-   }
+export const rootReducer = combineReducers({
+   informacoes: valoresReducer
 })

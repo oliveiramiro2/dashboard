@@ -1,5 +1,5 @@
 import { Provider } from 'react-redux'
-import store from './store/reducers/rootReducer'
+import { store } from './store/store'
 import React from 'react'
 
 import HeaderSearch from './componentes/HeaderSearch'
