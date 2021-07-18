@@ -1,21 +1,19 @@
 import React from 'react'
 import { connect } from 'react-redux'
-//import axios from 'axios'
 
 import { LineChart, XAxis, CartesianGrid, Line } from 'recharts'
-//import { changeCompany } from './../store/actions/TrocaEmpresa'
+import { changeCompany } from './../store/actions/TrocaEmpresa'
 
-function DashBoardAcoes(informacoes){
-    const data = [{
-        'companyName': 'aapl',
-        'latestPrice': 178
-    }]
-
-    console.log('dashboard', informacoes.informacoes.informacoes)
+function DashBoardAcoes({ informacoes, changeCompany }){
+    React.useEffect(()=>{
+        changeCompany('https://cloud.iexapis.com/v1/stock/aapl/quote/?token=pk_c778b6dbd2154d6fa15043568d469931')
+    }, [changeCompany])
+    console.log('dashboard', informacoes)
     return (
         <div>
-            <LineChart width={500} height={300} data={data}>
+            <LineChart width={500} height={300} data={[informacoes]}>
                 <XAxis dataKey="companyName"/>
+                <XAxis dataKey="symbol"/>
                 <CartesianGrid stroke="#eee" strokeDasharray="5 5"/>
                 <Line type="monotone" dataKey="latestPrice" stroke="#8884d8" />
             </LineChart>
@@ -25,7 +23,7 @@ function DashBoardAcoes(informacoes){
 }
 
 const mapStateToProps = state => {
-    return { informacoes: state.informacoes }
+    return { informacoes: state.informacoes.informacoes }
 }
 
-export default connect(mapStateToProps)(DashBoardAcoes)
+export default connect(mapStateToProps, { changeCompany })(DashBoardAcoes)

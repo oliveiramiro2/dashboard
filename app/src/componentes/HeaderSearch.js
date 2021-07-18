@@ -2,15 +2,14 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import { changeCompany } from './../store/actions/TrocaEmpresa'
-//import { doResquestCompany } from './../api'
+
+let symbolCompany = ''
 
 const HeaderSearch = ({changeCompany}) => {
     
     React.useEffect(()=>{
-        changeCompany('https://cloud.iexapis.com/v1/stock/aapl/quote/?token=pk_c778b6dbd2154d6fa15043568d469931')
+        changeCompany(`https://cloud.iexapis.com/v1/stock/${symbolCompany}/quote/?token=pk_c778b6dbd2154d6fa15043568d469931`)
     }, [changeCompany])
-
-    let symbolCompany = ''
 
     function GetInputValue(e){
         symbolCompany = e.target.value
@@ -21,6 +20,8 @@ const HeaderSearch = ({changeCompany}) => {
             changeCompany(`https://cloud.iexapis.com/v1/stock/${company}/quote/?token=pk_c778b6dbd2154d6fa15043568d469931`)
         })
     }
+
+    console.log('header', symbolCompany)
 
     return (
         <div className="form-group form-search">
