@@ -3,32 +3,30 @@ import { connect } from 'react-redux'
 
 import { changeCompany } from './../store/actions/TrocaEmpresa'
 
-let symbolCompany = ''
 
 const HeaderSearch = ({changeCompany}) => {
     
-    React.useEffect(()=>{
-        changeCompany(`https://cloud.iexapis.com/v1/stock/${symbolCompany}/quote/?token=pk_c778b6dbd2154d6fa15043568d469931`)
-    }, [changeCompany])
+    //capturando o simbolo da empresa com um hook
+    const [ symbol, setSymbol ] = React.useState({symbol: 'aapl'}) // criando o hook
 
     function GetInputValue(e){
-        symbolCompany = e.target.value
+        setSymbol({symbol: e.target.value})                         // capturando a informacao
     }
 
-    function SetCompanyInformation(e, company){
-        e.preventDefault(()=>{
-            changeCompany(`https://cloud.iexapis.com/v1/stock/${company}/quote/?token=pk_c778b6dbd2154d6fa15043568d469931`)
-        })
+    function SetCompanyInformation(e){
+        e.preventDefault()                                          // parando o refresh da pagina e chamando a funcao
+                                                                    // que troca as informações da empresa
+        changeCompany(
+            `https://cloud.iexapis.com/v1/stock/${symbol.symbol}/quote/?token=pk_c778b6dbd2154d6fa15043568d469931`
+        )
     }
-
-    console.log('header', symbolCompany)
 
     return (
         <div className="form-group form-search">
-            <form>
+            <form onSubmit={ SetCompanyInformation }>
                 <label className="pesquise-lb"><strong>Pesquise aqui</strong></label>
-                <input type="search" onChange={e=>GetInputValue(e)} className="form-control ipt-search" id="exampleFormControlInput1" placeholder="Ex: aapl" />
-                <button type="submit" onClick={e=>SetCompanyInformation(e, symbolCompany)} className="btn btn-info btn-search">Pesquisar</button>
+                <input type="search" onChange={ GetInputValue } autoComplete="off" className="form-control ipt-search" id="exampleFormControlInput1" placeholder="Ex: aapl" />
+                <button type="submit" className="btn btn-info btn-search">Pesquisar</button>
             </form>
         </div>
     )
