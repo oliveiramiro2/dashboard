@@ -24,7 +24,7 @@ body{
 
 .btn-search:hover {
     transition: ease-in-out 0.8s;
-    transform: rotateX(360deg) translateZ(10px);
+    transform: rotateX(360deg);
     font-family: fantasy;
     background-color: #114a8bde;
 }
