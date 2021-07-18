@@ -1,4 +1,10 @@
-export const changeCompany = company => ({
-    type: "TROCA_EMPRESA",
-    empresa: company
-})
+import { doResquestCompany } from './../../api'
+
+export const changeCompany = url => {
+    const payload = doResquestCompany(url)
+
+    return {
+        type: "TROCA_EMPRESA",
+        payload
+    }   
+}

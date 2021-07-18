@@ -8,9 +8,7 @@ import DashBoardAcoes from './componentes/DashBoardAcoes'
 export default class App extends React.Component {
   
   render(){
-    console.log(store)
     return (
-      
       <div className="App">
           <Provider store={store}>
             <HeaderSearch />

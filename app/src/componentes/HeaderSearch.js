@@ -1,38 +1,40 @@
 import React from 'react'
-import { connect, useSelector } from 'react-redux'
-
-import axios from 'axios'
+import { connect } from 'react-redux'
 
 import { changeCompany } from './../store/actions/TrocaEmpresa'
+//import { doResquestCompany } from './../api'
 
-const HeaderSearch = ({informacoes}) => {
-    const inf = useSelector(state => state)
-    const loadCompany = (e) => {
-        try{
-            const url= 'https://cloud.iexapis.com/v1/stock/'+e.target.value+'/quote/?token=pk_c778b6dbd2154d6fa15043568d469931'
-            axios.get(url)
-                .then(res =>{
-                    //const info = res.data
-                    changeCompany(res.data)
-                    console.log(res.data) 
-                    console.log(informacoes)
-                })
-            
-        }catch{
-            console.log('deu ruim')
-       }
+const HeaderSearch = ({changeCompany}) => {
+    
+    React.useEffect(()=>{
+        changeCompany('https://cloud.iexapis.com/v1/stock/aapl/quote/?token=pk_c778b6dbd2154d6fa15043568d469931')
+    }, [changeCompany])
+
+    let symbolCompany = ''
+
+    function GetInputValue(e){
+        symbolCompany = e.target.value
     }
 
-    console.log(inf.informacoes)
+    function SetCompanyInformation(e, company){
+        e.preventDefault(()=>{
+            changeCompany(`https://cloud.iexapis.com/v1/stock/${company}/quote/?token=pk_c778b6dbd2154d6fa15043568d469931`)
+        })
+    }
+
     return (
         <div className="form-group form-search">
             <form>
                 <label className="pesquise-lb"><strong>Pesquise aqui</strong></label>
-                <input type="search" onChange={(e)=>loadCompany(e)} className="form-control ipt-search" id="exampleFormControlInput1" placeholder="Ex: aapl" />
-                <button type="submit" className="btn btn-info btn-search">Pesquisar</button>
+                <input type="search" onChange={e=>GetInputValue(e)} className="form-control ipt-search" id="exampleFormControlInput1" placeholder="Ex: aapl" />
+                <button type="submit" onClick={e=>SetCompanyInformation(e, symbolCompany)} className="btn btn-info btn-search">Pesquisar</button>
             </form>
         </div>
     )
 }
 
-export default connect(state => ({informacoes:state.informacoes}))(HeaderSearch)
+const mapStateToProps = state => {
+    return { informacoes: state.informacoes }
+}
+
+export default connect(mapStateToProps, { changeCompany })(HeaderSearch)
