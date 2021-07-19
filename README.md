@@ -24,8 +24,8 @@
         <img src='https://github.com/oliveiramiro2/dashboard/blob/main/imgsReadMe/iniciando.png?raw=true' />
     <br /><hr />
     <p>Aqui está as fotos de como a aplicação se parece</p>
-    <img src='https://github.com/oliveiramiro2/dashboard/blob/main/imgsReadMe/home.png?raw=true' height='250' />
+    <img src='https://github.com/oliveiramiro2/dashboard/blob/main/imgsReadMe/home.png?raw=true' height='350' />
     <br>
-    <img src='https://github.com/oliveiramiro2/dashboard/blob/main/imgsReadMe/pesquisa.png?raw=true' height='250' />
+    <img src='https://github.com/oliveiramiro2/dashboard/blob/main/imgsReadMe/pesquisa.png?raw=true' height='350' />
     <br />
 </div>
