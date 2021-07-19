@@ -2,14 +2,13 @@
     <h1>Dashboard com api IEX</h1>
 
     <h2>Como rodar a aplicação</h2>
-<<<<<<< HEAD
-    <h2>Como rodar a aplicação</h2>
 
 <h4>Primeiro baixo o node e o react na máquina</h4>
+<a src='https://nodejs.org/pt-br/download/'> Download Node.js </a>
 <h4>Clone o repositório como nas imagens a seguir: </h4>
 <br />
 <div>
-    <p>Insira esta linha de comando na pasta desejada</p>
+    <p>Insira esta linha de comando na pasta desejada</p>	
     <p>https://github.com/oliveiramiro2/dashboard.git</p>
     <img src='https://github.com/oliveiramiro2/dashboard/blob/main/imgsReadMe/download3.png?raw=true' height='30' />
     <p>Na pasta do Node instale os pacotes express e body-parser</p>
