@@ -23,7 +23,6 @@ function DashBoardAcoes({ informacoes, changeCompany }){
             </LineChart>
             <InfoDashboard />
         </div>
-
     )
 }
 

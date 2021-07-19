@@ -23,7 +23,7 @@ body{
 }
 
 .recharts-wrapper{
-    margin: 50px auto auto 9%;
+    margin: 30px auto auto 9%;
     display: flex;
     float: left;
 }
@@ -50,6 +50,30 @@ body{
     color: #ff0000;
 }
 
-.low {
+.high {
     color: #1a1aff;
+}
+
+.icone-grafico {
+    display: inline;
+    margin: auto 8px;
+    background-color: aliceblue;
+    font-size: 40px;
+}
+
+.div-exemplo {
+    display: flex;
+    justify-content: center;
+}
+
+.info-exemplo {
+    display: block;
+    text-align: center;
+}
+
+.icone-exemplo {
+    margin: auto 20px;
+    font-size: 35px;
+    display: inline;
+    margin-right: 10px;
 }
