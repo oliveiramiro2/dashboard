@@ -21,11 +21,5 @@
     <img src='https://github.com/oliveiramiro2/dashboard/blob/main/imgsReadMe/libsNecessarias.png?raw=true' height='25' />
     <br /><hr />
     <p>Depois de tudo arrumado rode a aplicação na pasta do react (app)</p>
-    <img scr='https://github.com/oliveiramiro2/dashboard/blob/main/imgsReadMe/iniciando.png?raw=true' />
-    <br /><hr />
-    <p>Aqui está as fotos de como a aplicação se parece</p>
-    <img scr='https://github.com/oliveiramiro2/dashboard/blob/main/imgsReadMe/home.png?raw=true' height='250' />
-    <br>
-    <img scr='https://github.com/oliveiramiro2/dashboard/blob/main/imgsReadMe/pesquisa.png?raw=true' height='250' />
-    <br />
+
 </div>
