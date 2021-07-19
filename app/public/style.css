@@ -22,19 +22,34 @@ body{
     margin-bottom: 5px;
 }
 
-.btn-search:hover {
-    transition: ease-in-out 0.8s;
-    transform: rotateX(360deg);
-    font-family: fantasy;
-    background-color: #114a8bde;
-}
-
 .recharts-wrapper{
-    margin-top: 50px;
-    padding-left: 22%;
+    margin: 50px auto auto 9%;
+    display: flex;
+    float: left;
 }
 
 .recharts-surface {
     background-color: rgba(204, 204, 204, 0.37);
     border: 1px dashed black;
+    margin-left: 5%;
+}
+
+.info-company {
+    background-color: #fff;
+    margin-top: 50px;
+    float: left;
+    padding: 2% 1%;
+    font-size: 20px;
+}
+
+.lista-informacao {
+    list-style: none;
+}
+
+.latest-price {
+    color: #ff0000;
+}
+
+.low {
+    color: #1a1aff;
 }
