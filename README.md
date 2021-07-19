@@ -11,34 +11,14 @@
 <div>
     <p>Insira esta linha de comando na pasta desejada</p>
     <p>https://github.com/oliveiramiro2/dashboard.git</p>
-    <img src='https://github.com/oliveiramiro2/dashboard/blob/main/imgsReadMe/download3.png?raw=true' height='200' />
+    <img src='https://github.com/oliveiramiro2/dashboard/blob/main/imgsReadMe/download3.png?raw=true' height='50' />
     <p>Na pasta do Node instale os pacotes express e body-parser</p>
     <p>npm install express body-parser</p>
-    <img src='https://github.com/oliveiramiro2/dashboard/blob/main/imgsReadMe/libsNode.png?raw=true' height='400' />
+    <img src='https://github.com/oliveiramiro2/dashboard/blob/main/imgsReadMe/libsNode.png?raw=true' height='50' />
     <p>Pegue uma pasta Node_modules de outro projeto seu ou crie um app react para pegar</p>
-    <img src='https://github.com/oliveiramiro2/dashboard/blob/main/imgsReadMe/mostrandoNode.png?raw=true' height='400' />
+    <img src='https://github.com/oliveiramiro2/dashboard/blob/main/imgsReadMe/mostrandoNode.png?raw=true' height='50' />
     <p>Na pasta do React instale os pacotes redux, react-redux, redux-promise, recharts e axios</p>  
     <p>npm install redux react-redux redux-promise recharts axios</p>
-    <img src='https://github.com/oliveiramiro2/dashboard/blob/main/imgsReadMe/libsNecessarias.png?raw=true' height='400' />
+    <img src='https://github.com/oliveiramiro2/dashboard/blob/main/imgsReadMe/libsNecessarias.png?raw=true' height='50' />
 </div>
 </div>
-=======
-    
-    <h4>Primeiro baixo o node e o react na máquina</h4>
-    <h4>Clone o repositório como nas imagens a seguir: </h4>
-    <br />
-    <div>
-        <p>Insira esta linha de comando na pasta desejada</p>
-        <p>https://github.com/oliveiramiro2/dashboard.git</p>
-        <img src='https://github.com/oliveiramiro2/dashboard/blob/main/imgsReadMe/download3.png?raw=true' height='200' />
-        <p>Na pasta do Node instale os pacotes express e body-parser</p>
-        <p>npm install express body-parser</p>
-        <img src='https://github.com/oliveiramiro2/dashboard/blob/main/imgsReadMe/libsNode.png?raw=true' height='400' />
-        <p>Pegue uma pasta Node_modules de outro projeto seu ou crie um app react para pegar</p>
-        <img src='https://github.com/oliveiramiro2/dashboard/blob/main/imgsReadMe/mostrandoNode.png?raw=true' height='400' />
-        <p>Na pasta do React instale os pacotes redux, react-redux, redux-promise, recharts e axios</p>  
-        <p>npm install redux react-redux redux-promise recharts axios</p>
-        <img src='https://github.com/oliveiramiro2/dashboard/blob/main/imgsReadMe/libsNecessarias.png?raw=true' height='400' />
-    </div>
-</div>
->>>>>>> 5dd1dbff56b389921fcddbe91ab88e78a208698f
