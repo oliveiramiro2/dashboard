@@ -7,17 +7,25 @@
     <h4>Clone o repositório como nas imagens a seguir: </h4>
     <p>Insira esta linha de comando na pasta desejada</p>	
     <p>https://github.com/oliveiramiro2/dashboard.git</p>
-    <img src='https://github.com/oliveiramiro2/dashboard/blob/main/imgsReadMe/download3.png?raw=true' height='25' />
-    <hr />
-    <p>Na pasta do Node instale os pacotes express e body-parser</p>
+    <img src='https://github.com/oliveiramiro2/dashboard/blob/main/imgsReadMe/download.png?raw=true' height='25' />
+    <br /><hr />
+    <p>Na pasta do Node (dashboard) instale os pacotes express e body-parser</p>
     <p>npm install express body-parser</p>
     <img src='https://github.com/oliveiramiro2/dashboard/blob/main/imgsReadMe/libsNode.png?raw=true' height='25' />
-    <hr />
-    <p>Pegue uma pasta Node_modules de outro projeto seu ou crie um app react para pegar</p>
+    <br /><hr />
+    <p>Pegue uma pasta Node_modules de outro projeto seu ou crie um app react para pegar e coloque-a na pasta React (app)</p>
     <img src='https://github.com/oliveiramiro2/dashboard/blob/main/imgsReadMe/mostrandoNode.png?raw=true' height='250' />
-    <hr />
-    <p>Na pasta do React instale os pacotes redux, react-redux, redux-promise, recharts e axios</p>  
+    <br /><hr />
+    <p>Na pasta do React (app) instale os pacotes redux, react-redux, redux-promise, recharts e axios</p>  
     <p>npm install redux react-redux redux-promise recharts axios</p>
     <img src='https://github.com/oliveiramiro2/dashboard/blob/main/imgsReadMe/libsNecessarias.png?raw=true' height='25' />
-
+    <br /><hr />
+    <p>Depois de tudo arrumado rode a aplicação na pasta do react (app)</p>
+    <img scr='https://github.com/oliveiramiro2/dashboard/blob/main/imgsReadMe/iniciando.png?raw=true' />
+    <br /><hr />
+    <p>Aqui está as fotos de como a aplicação se parece</p>
+    <img scr='https://github.com/oliveiramiro2/dashboard/blob/main/imgsReadMe/home.png?raw=true' height='250' />
+    <br>
+    <img scr='https://github.com/oliveiramiro2/dashboard/blob/main/imgsReadMe/pesquisa.png?raw=true' height='250' />
+    <br />
 </div>
