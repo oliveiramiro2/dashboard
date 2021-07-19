@@ -2,7 +2,7 @@
     <h1>Dashboard com api IEX</h1>
     <h2> Como rodar a aplicação </h2>
     <h4>Primeiro baixo o node e o react na máquina</h4>
-    <a src='https://nodejs.org/pt-br/download/'> Download Node.js </a>
+    <a href='https://nodejs.org/pt-br/download/'> Download Node.js </a>
     <hr />
     <h4>Clone o repositório como nas imagens a seguir: </h4>
     <p>Insira esta linha de comando na pasta desejada</p>	
