@@ -59,6 +59,7 @@ body{
     margin: auto 8px;
     background-color: aliceblue;
     font-size: 40px;
+    transform: rotateX(60deg);
 }
 
 .div-exemplo {
@@ -72,8 +73,36 @@ body{
 }
 
 .icone-exemplo {
-    margin: auto 20px;
-    font-size: 35px;
+    margin: auto 40px;
+    font-size: 45px;
     display: inline;
     margin-right: 10px;
+    border-radius: 30px;
+    box-shadow: #ddd 10px 5px 1px;
+    transform: rotateX(100deg);
+}
+
+.face {
+    color: blue;
+    background-color: #fff;
+}
+
+.ford {
+    color: #fff;
+    background-color: blue;
+}
+
+.mcdonald {
+    color: yellow;
+    background-color: #f00;
+}
+
+.visa {
+    color: #fff;
+    background-color: blue;
+}
+
+.apple {
+    color: #000;
+    background-color: #fff;
 }

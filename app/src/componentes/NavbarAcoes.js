@@ -9,11 +9,11 @@ function NavbarAcoes(){
         <nav>
             <h5 className='info-exemplo'>Empresas Conhecidas</h5> 
             <div className='div-exemplo'>
-                <p className='icone-exemplo'><FaFacebook /></p>
-                <p className='icone-exemplo'><SiFord /></p>
-                <p className='icone-exemplo'><SiMcdonalds /></p>
-                <p className='icone-exemplo'><SiVisa /></p>
-                <p className='icone-exemplo'><AiOutlineApple /></p> 
+                <p className='icone-exemplo face'><FaFacebook /></p>
+                <p className='icone-exemplo ford'><SiFord /></p>
+                <p className='icone-exemplo mcdonald'><SiMcdonalds /></p>
+                <p className='icone-exemplo visa'><SiVisa /></p>
+                <p className='icone-exemplo apple'><AiOutlineApple /></p> 
             </div>
             
         </nav>
