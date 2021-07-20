@@ -14,26 +14,26 @@ function NavbarAcoes({ changeCompany }){
     }
 
     return(
-        <nav>
+        <nav className='container-exemplo'>
             <h5 className='info-exemplo'>Empresas Conhecidas</h5> 
             <div className='div-exemplo'>
                 <p className='icone-exemplo face' onClick={()=>showExample('fb')}>
-                    <FaFacebook />
+                    <FaFacebook className='icon-ex' />
                 </p>
                 <p className='icone-exemplo ford' onClick={()=>showExample('f')}>
-                    <SiFord />
+                    <SiFord className='icon-ex' />
                 </p>
                 <p className='icone-exemplo twitter' onClick={()=>showExample('twtr')}>
-                    <FaTwitter />
+                    <FaTwitter className='icon-ex' />
                 </p>
                 <p className='icone-exemplo mcdonald' onClick={()=>showExample('mcd')}>
-                    <SiMcdonalds />
+                    <SiMcdonalds className='icon-ex' />
                 </p>
                 <p className='icone-exemplo visa' onClick={()=>showExample('v')}>
-                    <SiVisa />
+                    <SiVisa className='icon-ex' />
                 </p>
                 <p className='icone-exemplo apple' onClick={()=>showExample('aapl')}>
-                    <AiOutlineApple />
+                    <AiOutlineApple className='icon-ex' />
                 </p> 
             </div>
             

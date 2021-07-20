@@ -23,7 +23,7 @@
         color: rgb(243, 10, 10);
     }
     80%{
-        color: rgb(45, 0, 245);
+        color: rgb(0, 229, 245);
     }
     to{
         color: rgb(177, 10, 243); 
@@ -37,85 +37,81 @@
 .face:hover  {
     background-color: blue;
     color: #fff;
-    transform: translateY(-3px);
-    transition: ease-in-out 0.2s;
+    transform: translateY(-10px);
+    transition: ease-in-out 0.3s;
 }
 
 .ford:hover  {
     background-color: #fff;
     color: blue;
-    transform: translateY(-3px);
-    transition: ease-in-out 0.2s;
+    transform: translateY(-10px);
+    transition: ease-in-out 0.3s;
 }
 
 .twitter:hover {
     background-color:rgba(0, 153, 255, 0.822);
     color: #fff;
-    transform: translateY(-3px);
-    transition: ease-in-out 0.2s;
+    transform: translateY(-10px);
+    transition: ease-in-out 0.3s;
 }
 
 .mcdonald:hover  {
     background-color: yellow;
     color: #f00;
-    transform: translateY(-3px);
-    transition: ease-in-out 0.2s;
+    transform: translateY(-10px);
+    transition: ease-in-out 0.3s;
 }
 
 .visa:hover  {
     background-color: #fff;
     color: blue;
-    transform: translateY(-3px);
-    transition: ease-in-out 0.2s;
+    transform: translateY(-10px);
+    transition: ease-in-out 0.3s;
 }
 
 .apple:hover  {
-    background-color: #000;
+    background-color: rgb(75, 70, 70);
     color: #fff;
-    transform: translateY(-3px);
-    transition: ease-in-out 0.2s;
+    transform: translateY(-10px);
+    transition: ease-in-out 0.3s;
 }
 
-.icone-exemplo {
-    animation: turnAround infinite 2s ease-out;
+.animar {
+    animation: turnAroundtwo infinite 2s ease-out;
 }
 
-.icone-exemplo:hover {
-    animation: none;
-}
-
-@keyframes turnAround {
+@keyframes turnAroundtwo {
     from{
         transform: rotateY(0deg);
     }
     10%{
-        transform: rotateY(30deg);
+        transform: rotateY(-30deg);
     }
     20%{
-       transform: rotateY(60deg);
+       transform: rotateY(-60deg);
     }
     30%{
-        transform: rotateY(120deg);
+        transform: rotateY(-120deg);
     }
     40%{
-        transform: rotateY(180deg);
+        transform: rotateY(-180deg);
     }
     50%{
-        transform: rotateY(200deg);
+        transform: rotateY(-200deg);
     }
     60%{
-        transform: rotateY(240deg);
+        transform: rotateY(-240deg);
     }
     70%{
-        transform: rotateY(270deg);
+        transform: rotateY(-270deg);
     }
     80%{
-        transform: rotateY(300deg);
+        transform: rotateY(-300deg);
     }
     90%{
-        transform: rotateY(330deg);
+        transform: rotateY(-330deg);
     }
     to{
-        transform: rotateY(360deg);
+        transform: rotateY(-360deg);
     }
 }

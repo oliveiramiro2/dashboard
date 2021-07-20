@@ -3,7 +3,7 @@ body{
 }
 
 .form-search {
-    margin-top: 2%;
+    margin-top: 1%;
 }
 
 .ipt-search {
@@ -23,7 +23,7 @@ body{
 }
 
 .recharts-wrapper{
-    margin: 30px auto auto 9%;
+    margin: auto auto auto 9%;
     display: flex;
     float: left;
 }
@@ -36,7 +36,6 @@ body{
 
 .info-company {
     background-color: #fff;
-    margin-top: 50px;
     float: left;
     padding: 2% 1%;
     font-size: 20px;
@@ -58,8 +57,16 @@ body{
     display: inline;
     margin: auto 8px;
     background-color: aliceblue;
-    font-size: 40px;
-    transform: rotateX(60deg);
+    font-size: 35px;
+    transform: rotateX(80deg);
+}
+
+.container-exemplo {
+    background-color: rgba(7, 118, 165, 0.384);
+    padding: 15px 30px 15px 0;
+    width: 70%;
+    margin-left: 12%;
+    transform: translateY(-12px);
 }
 
 .div-exemplo {
@@ -70,6 +77,9 @@ body{
 .info-exemplo {
     display: block;
     text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #fff;
+    font-size: 25px;
 }
 
 .icone-exemplo {
@@ -91,6 +101,10 @@ body{
     background-color: blue;
 }
 
+.ford {
+    font-size: 50px;
+}
+
 .twitter {
     color: rgba(0, 153, 255, 0.849);;
     background-color: #fff;
@@ -107,11 +121,10 @@ body{
 }
 
 .apple {
-    color: #000;
+    color: rgb(75, 70, 70);
     background-color: #fff;
 }
 
-.tt {
-    display: inline;
-    transform: rotateX(150deg);
+.icon-ex {
+    padding-bottom: 5px;
 }

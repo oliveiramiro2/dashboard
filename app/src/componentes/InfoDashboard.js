@@ -14,23 +14,23 @@ function InfoDashboard({ informacoes }){
             {informacoes ?
                 <ul className='lista-informacao'>
                     <li>
-                        <p className='icone-grafico'><FcShop /></p>
+                        <p className='icone-grafico'><FcShop className='animar' /></p>
                         Nome da empresa: {informacoes.companyName}
                     </li>
                     <li>
-                        <p className='icone-grafico'><VscSymbolString /></p>
+                        <p className='icone-grafico'><VscSymbolString className='animar' /></p>
                         Simbolo: {informacoes.symbol}
                     </li>
                     <li className='latest-price'>
-                        <p className='icone-grafico'><AiOutlineDollar /></p>
+                        <p className='icone-grafico'><AiOutlineDollar className='animar' /></p>
                         Latest Price  (gráfico): {informacoes.latestPrice}
                     </li>
                     <li className='high'>
-                        <p className='icone-grafico'><TiArrowUpOutline /></p>
+                        <p className='icone-grafico'><TiArrowUpOutline className='animar' /></p>
                         High  (gráfico): {informacoes.high}
                     </li>
                     <li>
-                        <p className='icone-grafico'><TiArrowDownOutline /></p>
+                        <p className='icone-grafico'><TiArrowDownOutline className='animar' /></p>
                         Low: {informacoes.low}
                     </li>
                 </ul>
