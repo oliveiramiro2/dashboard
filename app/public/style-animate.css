@@ -48,6 +48,13 @@
     transition: ease-in-out 0.2s;
 }
 
+.twitter:hover {
+    background-color:rgba(0, 153, 255, 0.822);
+    color: #fff;
+    transform: translateY(-3px);
+    transition: ease-in-out 0.2s;
+}
+
 .mcdonald:hover  {
     background-color: yellow;
     color: #f00;

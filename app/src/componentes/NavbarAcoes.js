@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { FaFacebook } from 'react-icons/fa'
+import { FaFacebook, FaTwitter } from 'react-icons/fa'
 import { SiFord, SiVisa, SiMcdonalds } from 'react-icons/si'
 import { AiOutlineApple } from 'react-icons/ai'
 
@@ -22,6 +22,9 @@ function NavbarAcoes({ changeCompany }){
                 </p>
                 <p className='icone-exemplo ford' onClick={()=>showExample('f')}>
                     <SiFord />
+                </p>
+                <p className='icone-exemplo twitter' onClick={()=>showExample('twtr')}>
+                    <FaTwitter />
                 </p>
                 <p className='icone-exemplo mcdonald' onClick={()=>showExample('mcd')}>
                     <SiMcdonalds />
