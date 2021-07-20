@@ -16,8 +16,8 @@
     <p>Pegue uma pasta Node_modules de outro projeto seu ou crie um app react para pegar e coloque-a na pasta React (app)</p>
     <img src='https://github.com/oliveiramiro2/dashboard/blob/main/imgsReadMe/mostrandoNode.png?raw=true' height='250' />
     <br /><hr />
-    <p>Na pasta do React (app) instale os pacotes redux, react-redux, redux-promise, recharts e axios</p>  
-    <p>npm install redux react-redux redux-promise recharts axios</p>
+    <p>Na pasta do React (app) instale os pacotes redux, react-redux, redux-promise, recharts, react-icons, e axios</p>  
+    <p>npm install redux react-redux redux-promise recharts  react-icons axios</p>
     <img src='https://github.com/oliveiramiro2/dashboard/blob/main/imgsReadMe/libsNecessarias.png?raw=true' height='25' />
     <br /><hr />
     <p>Depois de tudo arrumado rode a aplicação na pasta do react (app)</p>
