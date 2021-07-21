@@ -1,7 +1,3 @@
-.btn-search {
-    animation: changColor ease-in-out 2s infinite;
-}
-
 .btn-search:hover {
     transition: ease-in-out 0.5s;
     font-family: fantasy;
@@ -9,71 +5,50 @@
     animation: none;
 }
 
-@keyframes changColor {
-    from{
-        color: #fff;
-    }
-    20%{
-        color: rgb(10, 243, 80);
-    }
-    40%{
-        color: rgb(239, 243, 2);
-    }
-    60%{
-        color: rgb(243, 10, 10);
-    }
-    80%{
-        color: rgb(0, 229, 245);
-    }
-    to{
-        color: rgb(177, 10, 243); 
-    }
+.container-exemplo:hover {
+    background-color: rgba(7, 118, 165, 0.384);
+    color: #fff;
 }
 
 .icone-exemplo:hover {
     cursor: pointer;
+    transition: ease-in-out 0.3s;
 }
 
 .face:hover  {
     background-color: blue;
     color: #fff;
     transform: translateY(-10px);
-    transition: ease-in-out 0.3s;
 }
 
 .ford:hover  {
     background-color: #fff;
     color: blue;
     transform: translateY(-10px);
-    transition: ease-in-out 0.3s;
 }
 
 .twitter:hover {
     background-color:rgba(0, 153, 255, 0.822);
     color: #fff;
     transform: translateY(-10px);
-    transition: ease-in-out 0.3s;
 }
 
 .mcdonald:hover  {
     background-color: yellow;
     color: #f00;
     transform: translateY(-10px);
-    transition: ease-in-out 0.3s;
 }
 
 .visa:hover  {
     background-color: #fff;
     color: blue;
     transform: translateY(-10px);
-    transition: ease-in-out 0.3s;
 }
 
 .apple:hover  {
     background-color: rgb(75, 70, 70);
     color: #fff;
     transform: translateY(-10px);
-    transition: ease-in-out 0.3s;
 }
 
 .animar {

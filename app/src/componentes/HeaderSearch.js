@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 
 import { changeCompany } from './../store/actions/TrocaEmpresa'
 
-
 const HeaderSearch = ({changeCompany}) => {
     
     //capturando o simbolo da empresa com um hook
@@ -24,9 +23,19 @@ const HeaderSearch = ({changeCompany}) => {
     return (
         <div className="form-group form-search">
             <form onSubmit={ SetCompanyInformation }>
-                <label className="pesquise-lb"><strong>Pesquise aqui</strong></label>
-                <input type="search" onChange={ GetInputValue } autoComplete="off" className="form-control ipt-search" id="exampleFormControlInput1" placeholder="Ex: aapl" />
-                <button type="submit" className="btn btn-info btn-search">Pesquisar</button>
+                <input 
+                    type="search" 
+                    onChange={ GetInputValue } 
+                    autoComplete="off" 
+                    className="form-control ipt-search" 
+                    id="exampleFormControlInput1" 
+                    placeholder="Ex: aapl" 
+                />
+                <button type="submit" className="btn btn-info btn-search">                   
+                    <p className='btn-search-text'>                       
+                        Pesquisar
+                    </p>                   
+                </button>
             </form>
         </div>
     )
