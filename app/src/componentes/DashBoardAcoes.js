@@ -6,15 +6,18 @@ import { changeCompany } from './../store/actions/TrocaEmpresa'
 
 import InfoDashboard from './InfoDashboard'
 
-function DashBoardAcoes({ informacoes, simbolo, changeCompany }){
+function DashBoardAcoes({ informacoes, changeCompany }){
     // imprimindo o exemplo na renderizacao da aplicaca
-    React.useEffect(()=>{
+    /*React.useEffect(()=>{
         changeCompany('https://cloud.iexapis.com/v1/stock/aapl/quote/?token=pk_c778b6dbd2154d6fa15043568d469931')
-    }, [changeCompany])
+    }, [changeCompany])*/
 
-    /*setInterval(()=>{
-        changeCompany(`https://cloud.iexapis.com/v1/stock/${simbolo}/quote/?token=pk_c778b6dbd2154d6fa15043568d469931`)
-    }, 10000)*/
+    React.useEffect(()=> {
+        setInterval(()=>{
+            if(informacoes.simbolo.simbolo)
+                changeCompany(`https://cloud.iexapis.com/v1/stock/${informacoes.simbolo.simbolo}/quote/?token=pk_c778b6dbd2154d6fa15043568d469931`)
+        }, 50000)
+    }, [informacoes, changeCompany])
 
     return (
         <div>
@@ -26,7 +29,7 @@ function DashBoardAcoes({ informacoes, simbolo, changeCompany }){
                 <CartesianGrid stroke="#ccc" strokeDasharray="5 5"/>
                 <Line type="monotone" dataKey="latestPrice" stroke="#ff0000" />
                 <Line type="monotone" dataKey="high" stroke="#1a1aff" />
-            </LineChart>
+            </LineChart>           
             <InfoDashboard />
         </div>
     )
@@ -35,7 +38,6 @@ function DashBoardAcoes({ informacoes, simbolo, changeCompany }){
 const mapStateToProps = state => {
     return { 
         informacoes: state,
-        simbolo: state.simbolo, 
     }
 }
 
