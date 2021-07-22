@@ -8,7 +8,7 @@ import { TiArrowDownOutline, TiArrowUpOutline } from 'react-icons/ti'
 
 function InfoDashboard({ informacoes }){
     // imprimindo as informacoes da empresa consultada
-
+    console.log(informacoes)
     return (
         <div className='info-company'>
             {informacoes ?
@@ -35,8 +35,9 @@ function InfoDashboard({ informacoes }){
                     </li>
                 </ul>
             :
-                < >
-                </ >
+                <p >
+                oi
+                </p>
             } 
         </div> 
 
@@ -44,7 +45,7 @@ function InfoDashboard({ informacoes }){
 }
 
 const mapStateToProps = state => {
-    return { informacoes: state.informacoes.informacoes }
+    return [{ informacoes: state.informacoes }]
 }
 
 export default connect(mapStateToProps)(InfoDashboard)

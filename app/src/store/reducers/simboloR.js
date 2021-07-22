@@ -3,7 +3,7 @@ const initialState = {
 }
 
 // funcao que troca os valores do reducer
-const simboloReducer = (state=initialState.informacoes, action) => {
+const simboloReducer = (state=initialState.simbolo, action) => {
   switch(action.type){
     case 'TROCA_SIMBOLO':
       return {simbolo: action.payload}
