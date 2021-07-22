@@ -6,11 +6,15 @@ import { changeCompany } from './../store/actions/TrocaEmpresa'
 
 import InfoDashboard from './InfoDashboard'
 
-function DashBoardAcoes({ informacoes, changeCompany }){
+function DashBoardAcoes({ informacoes, simbolo, changeCompany }){
     // imprimindo o exemplo na renderizacao da aplicaca
     React.useEffect(()=>{
         changeCompany('https://cloud.iexapis.com/v1/stock/aapl/quote/?token=pk_c778b6dbd2154d6fa15043568d469931')
     }, [changeCompany])
+
+    /*setInterval(()=>{
+        changeCompany(`https://cloud.iexapis.com/v1/stock/${simbolo}/quote/?token=pk_c778b6dbd2154d6fa15043568d469931`)
+    }, 10000)*/
 
     return (
         <div>
@@ -29,7 +33,10 @@ function DashBoardAcoes({ informacoes, changeCompany }){
 }
 
 const mapStateToProps = state => {
-    return { informacoes: state }
+    return { 
+        informacoes: state,
+        simbolo: state.simbolo, 
+    }
 }
 
 export default connect(mapStateToProps, { changeCompany })(DashBoardAcoes)

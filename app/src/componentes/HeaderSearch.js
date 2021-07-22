@@ -2,8 +2,9 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import { changeCompany } from './../store/actions/TrocaEmpresa'
+import { changeSymbol } from './../store/actions/TrocaSimbolo'
 
-const HeaderSearch = ({changeCompany}) => {
+const HeaderSearch = ({simbolo, changeCompany, changeSymbol}) => {
     
     //capturando o simbolo da empresa com um hook
     const [ symbol, setSymbol ] = React.useState({symbol: 'aapl'}) // criando o hook
@@ -14,7 +15,7 @@ const HeaderSearch = ({changeCompany}) => {
 
     function SetCompanyInformation(e){
         e.preventDefault()                                          // parando o refresh da pagina e chamando a funcao
-                                                                    // que troca as informações da empresa
+        changeSymbol(symbol.symbol)                                 // que troca as informações da empresa
         changeCompany(
             `https://cloud.iexapis.com/v1/stock/${symbol.symbol}/quote/?token=pk_c778b6dbd2154d6fa15043568d469931`
         )
@@ -42,7 +43,7 @@ const HeaderSearch = ({changeCompany}) => {
 }
 
 const mapStateToProps = state => {
-    return { informacoes: state.informacoes }
+    return { simbolo: state.simbolo }
 }
 
-export default connect(mapStateToProps, { changeCompany })(HeaderSearch)
+export default connect(mapStateToProps, { changeCompany, changeSymbol })(HeaderSearch)

@@ -5,9 +5,11 @@ import { SiFord, SiVisa, SiMcdonalds } from 'react-icons/si'
 import { AiOutlineApple } from 'react-icons/ai'
 
 import { changeCompany } from './../store/actions/TrocaEmpresa'
+import { changeSymbol } from './../store/actions/TrocaSimbolo'
 
-function NavbarAcoes({ changeCompany }){
+function NavbarAcoes({ changeCompany, changeSymbol, simbolo }){
     const showExample = empresa => {
+        changeSymbol(empresa)
         changeCompany(
             `https://cloud.iexapis.com/v1/stock/${empresa}/quote/?token=pk_c778b6dbd2154d6fa15043568d469931`
         )
@@ -42,7 +44,7 @@ function NavbarAcoes({ changeCompany }){
 }
 
 const mapStateToProps = state => {
-    return { informacoes: state.informacoes }
+    return { informacoes: state.informacoes, simbolo: state.simbolo }
 }
 
-export default connect(mapStateToProps, { changeCompany })(NavbarAcoes)
+export default connect(mapStateToProps, { changeCompany, changeSymbol })(NavbarAcoes)
