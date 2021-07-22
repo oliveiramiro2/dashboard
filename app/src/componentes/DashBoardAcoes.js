@@ -7,14 +7,16 @@ import { changeCompany } from './../store/actions/TrocaEmpresa'
 import InfoDashboard from './InfoDashboard'
 
 function DashBoardAcoes({ informacoes, changeCompany }){
-    // imprimindo o exemplo na renderizacao da aplicacao
+    // imprimindo o exemplo na renderizacao da aplicaca
     React.useEffect(()=>{
         changeCompany('https://cloud.iexapis.com/v1/stock/aapl/quote/?token=pk_c778b6dbd2154d6fa15043568d469931')
     }, [changeCompany])
 
     return (
         <div>
-            <LineChart width={700} height={400} data={[informacoes]}>
+            <LineChart width={700} height={400} data={informacoes.informacoes.map((valor)=>{
+                return valor.informacoes
+            })}>
                 <XAxis dataKey="companyName"/>
                 <YAxis />
                 <CartesianGrid stroke="#ccc" strokeDasharray="5 5"/>
@@ -27,7 +29,7 @@ function DashBoardAcoes({ informacoes, changeCompany }){
 }
 
 const mapStateToProps = state => {
-    return { informacoes: state.informacoes.informacoes }
+    return { informacoes: state }
 }
 
 export default connect(mapStateToProps, { changeCompany })(DashBoardAcoes)

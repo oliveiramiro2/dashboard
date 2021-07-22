@@ -1,8 +1,8 @@
-import { doResquestCompany } from './../../api'
+import { doRequestCompany } from './../../api'
 
-export const changeCompany = url => {
+export const changeCompany = (url) => {
     // construindo a funcao que vai trocar os valores do reducer
-    const payload = doResquestCompany(url)
+    const payload = doRequestCompany(url)
 
     return {
         type: "TROCA_EMPRESA",

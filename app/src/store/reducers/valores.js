@@ -1,4 +1,4 @@
-// statos inicial de informacoes
+// status inicial de informacoes
 const initialState = {
     informacoes : []
 }
@@ -7,7 +7,7 @@ const initialState = {
 const valoresReducer = (state=initialState.informacoes, action) => {
   switch(action.type){
     case 'TROCA_EMPRESA':
-      return { ...state, informacoes: action.payload }
+      return [ ...state, {informacoes: action.payload} ]
     default:
       return state
   }
