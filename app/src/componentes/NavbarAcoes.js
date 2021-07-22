@@ -7,7 +7,7 @@ import { AiOutlineApple } from 'react-icons/ai'
 import { changeCompany } from './../store/actions/TrocaEmpresa'
 import { changeSymbol } from './../store/actions/TrocaSimbolo'
 
-function NavbarAcoes({ changeCompany, changeSymbol, simbolo }){
+function NavbarAcoes({ changeCompany, changeSymbol}){
     const showExample = empresa => {
         changeSymbol(empresa)
         changeCompany(
@@ -44,7 +44,7 @@ function NavbarAcoes({ changeCompany, changeSymbol, simbolo }){
 }
 
 const mapStateToProps = state => {
-    return { informacoes: state.informacoes, simbolo: state.simbolo }
+    return { informacoes: state.informacoes }
 }
 
 export default connect(mapStateToProps, { changeCompany, changeSymbol })(NavbarAcoes)
