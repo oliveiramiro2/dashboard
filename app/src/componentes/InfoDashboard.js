@@ -8,35 +8,37 @@ import { TiArrowDownOutline, TiArrowUpOutline } from 'react-icons/ti'
 
 function InfoDashboard({ informacoes }){
     // imprimindo as informacoes da empresa consultada
-    console.log(informacoes[0])
+    const [data, setData] = React.useState(null)
+    if(informacoes && informacoes[0] !== data)
+        setData(informacoes[0])                     //informacoes que serao usadas na descricao
+
     return (
         <div className='info-company'>
-            {informacoes ?
+            {data ?
                 <ul className='lista-informacao'>
                     <li>
                         <p className='icone-grafico'><FcShop className='animar' /></p>
-                        Nome da empresa: {informacoes[0].companyName}
+                        Nome da empresa: <strong>{data.informacoes.companyName}</strong>
                     </li>
                     <li>
                         <p className='icone-grafico'><VscSymbolString className='animar' /></p>
-                        Simbolo: {informacoes.symbol}
+                        Simbolo: <strong>{data.informacoes.symbol}</strong>
                     </li>
                     <li className='latest-price'>
                         <p className='icone-grafico'><AiOutlineDollar className='animar' /></p>
-                        Latest Price  (gráfico): {informacoes.latestPrice}
+                        Latest Price  (gráfico): <strong>{data.informacoes.latestPrice}</strong>
                     </li>
                     <li className='high'>
                         <p className='icone-grafico'><TiArrowUpOutline className='animar' /></p>
-                        High  (gráfico): {informacoes.high}
+                        High  (gráfico): <strong>{data.informacoes.high}</strong>
                     </li>
                     <li>
                         <p className='icone-grafico'><TiArrowDownOutline className='animar' /></p>
-                        Low: {informacoes.low}
+                        Low: <strong>{data.informacoes.low}</strong>
                     </li>
                 </ul>
             :
-                < >
-                </>
+                <p> Clique no ícone ou busque uma empresa </p>
             } 
         </div> 
 

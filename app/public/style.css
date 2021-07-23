@@ -1,5 +1,6 @@
 body{
-    background-color: aliceblue;
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    overflow: hidden;
 }
 
 .ipt-search {
@@ -8,6 +9,10 @@ body{
     height: 60px;
     background-color: #2acece2d;
     color: black;
+}
+
+.form-search {
+    margin-bottom: 3px;
 }
 
 .btn-search {
@@ -26,7 +31,7 @@ body{
 }
 
 .recharts-wrapper{
-    margin: auto auto auto 9%;
+    margin: auto auto auto 7%;
     display: flex;
     float: left;
 }
@@ -34,7 +39,7 @@ body{
 .recharts-surface {
     border: 1px dashed black;
     margin-left: 5%;
-    
+    background-color: #eee;
 }
 
 .info-company {
@@ -42,6 +47,7 @@ body{
     float: left;
     padding: 2% 1%;
     font-size: 20px;
+    border-radius: 20px;
 }
 
 .lista-informacao {
@@ -61,16 +67,20 @@ body{
     margin: auto 8px;
     background-color: aliceblue;
     font-size: 35px;
-    transform: rotateX(80deg);
+}
+
+.container-exemplo-full {
+    display: flex;
+    justify-content: center;
 }
 
 .container-exemplo {
     background-color: #f8fff0;
     padding: 15px 80px 15px 0;
-    margin-left: 15%;
     display: inline-block;
-    transform: translateY(-12px);
     border-radius: 35px;
+    justify-content: center;
+    margin-bottom: 2px;
 }
 
 .div-exemplo {
@@ -78,12 +88,13 @@ body{
     justify-content: center;
 }
 
-.info-exemplo {
+.info-h5 {
     display: block;
     text-align: center;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: rgb(255, 0, 0);
     font-size: 25px;
+    padding-left: 9%;
 }
 
 .icone-exemplo {
@@ -91,7 +102,7 @@ body{
     font-size: 45px;
     display: inline;
     margin-right: 10px;
-    border-radius: 20px;
+    border-radius: 45%;
     box-shadow: #ddd 10px 5px 1px;
 }
 
@@ -109,16 +120,19 @@ body{
 .twitter {
     color: rgba(0, 153, 255, 0.849);;
     background-color: #fff;
+    font-size: 55px;
 }
 
 .mcdonald {
     color: yellow;
     background-color: #f00;
+    font-size: 55px;
 }
 
 .visa {
     color: #fff;
     background-color: blue;
+    font-size: 50px;
 }
 
 .apple {
