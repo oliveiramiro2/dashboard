@@ -6,13 +6,23 @@ import { AiOutlineApple } from 'react-icons/ai'
 
 import { changeCompany } from './../store/actions/TrocaEmpresa'
 import { changeSymbol } from './../store/actions/TrocaSimbolo'
+import { intervalo } from './DashBoardAcoes'
 
-function NavbarAcoes({ changeCompany, changeSymbol, simbolo}){
+let choice = 0
+
+function NavbarAcoes({ changeCompany, changeSymbol, simbolo, informacoes}){
     const showExample = empresa => {
-        changeSymbol(empresa)
-        changeCompany(
-            `https://cloud.iexapis.com/v1/stock/${simbolo.simbolo}/quote/?token=pk_c778b6dbd2154d6fa15043568d469931`
-        )
+        if(empresa === simbolo.simbolo || empresa === simbolo){
+            choice = 0
+        }else{
+            choice = 1
+            clearInterval(intervalo)
+            changeSymbol(empresa)
+            changeCompany(
+                `https://cloud.iexapis.com/v1/stock/${empresa}/quote/?token=pk_c778b6dbd2154d6fa15043568d469931`,
+                choice
+            )            
+        }
     }
 
     return(

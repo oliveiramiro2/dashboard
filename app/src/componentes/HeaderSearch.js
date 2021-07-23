@@ -3,6 +3,9 @@ import { connect } from 'react-redux'
 
 import { changeCompany } from './../store/actions/TrocaEmpresa'
 import { changeSymbol } from './../store/actions/TrocaSimbolo'
+import { intervalo } from './DashBoardAcoes'
+
+let choice = 0
 
 const HeaderSearch = ({simbolo, changeCompany, changeSymbol}) => {
     
@@ -15,23 +18,19 @@ const HeaderSearch = ({simbolo, changeCompany, changeSymbol}) => {
 
     function SetCompanyInformation(e){
         e.preventDefault()                                          // parando o refresh da pagina e chamando a funcao
-        changeSymbol(symbol.symbol)                              // que troca as informações da empresa
-        changeCompany(
-            `https://cloud.iexapis.com/v1/stock/${simbolo.simbolo}/quote/?token=pk_c778b6dbd2154d6fa15043568d469931`
-        )
+        if(symbol.symbol === simbolo){                              // que troca as informações da empresa
+            choice = 0
+        }else{
+            choice = 1
+            clearInterval(intervalo)
+            changeSymbol(symbol.symbol)                              
+            changeCompany(
+                `https://cloud.iexapis.com/v1/stock/${symbol.symbol}/quote/?token=pk_c778b6dbd2154d6fa15043568d469931`,
+                choice
+            )
+        }
+        
     }
-
-    /*setInterval(()=>{
-        if(simbolo.simbolo)
-            changeCompany(`https://cloud.iexapis.com/v1/stock/${simbolo.simbolo}/quote/?token=pk_c778b6dbd2154d6fa15043568d469931`)
-    }, 2000)*/
-
-    /*React.useEffect(()=> {
-        setInterval(()=>{
-            if(simbolo.simbolo)
-                changeCompany(`https://cloud.iexapis.com/v1/stock/${simbolo.simbolo}/quote/?token=pk_c778b6dbd2154d6fa15043568d469931`)
-        }, 2000)
-    }, [simbolo, changeCompany])*/
 
     return (
         <div className="form-group form-search">

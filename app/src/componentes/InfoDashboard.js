@@ -8,14 +8,14 @@ import { TiArrowDownOutline, TiArrowUpOutline } from 'react-icons/ti'
 
 function InfoDashboard({ informacoes }){
     // imprimindo as informacoes da empresa consultada
-
+    console.log(informacoes[0])
     return (
         <div className='info-company'>
             {informacoes ?
                 <ul className='lista-informacao'>
                     <li>
                         <p className='icone-grafico'><FcShop className='animar' /></p>
-                        Nome da empresa: {informacoes.companyName}
+                        Nome da empresa: {informacoes[0].companyName}
                     </li>
                     <li>
                         <p className='icone-grafico'><VscSymbolString className='animar' /></p>

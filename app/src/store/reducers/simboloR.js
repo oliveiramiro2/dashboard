@@ -1,5 +1,5 @@
 const initialState = {
-    simbolo : 'aapl'
+    simbolo : ''
 }
 
 // funcao que troca os valores do reducer
