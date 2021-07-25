@@ -1,6 +1,6 @@
 body{
     background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .ipt-search {
@@ -16,11 +16,10 @@ body{
 }
 
 .btn-search {
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
-    height: 1%;
-    height: 60px;
+    height: 9.5%;
     width: 10%;
     padding-left: 3%;
 }
@@ -39,6 +38,7 @@ body{
 .recharts-surface {
     border: 1px dashed black;
     margin-left: 5%;
+    margin-top: 1%;
     background-color: #eee;
 }
 
@@ -48,6 +48,7 @@ body{
     padding: 2% 1%;
     font-size: 20px;
     border-radius: 20px;
+    margin: 2%;
 }
 
 .lista-informacao {
@@ -76,11 +77,12 @@ body{
 
 .container-exemplo {
     background-color: #f8fff0;
-    padding: 15px 80px 15px 0;
+    padding: 8px 80px 8px 0;
     display: inline-block;
     border-radius: 35px;
     justify-content: center;
-    margin-bottom: 2px;
+    align-items: left;
+    margin: 5px;
 }
 
 .div-exemplo {
@@ -142,4 +144,133 @@ body{
 
 .icon-ex {
     padding-bottom: 5px;
+}
+
+/*media query*/
+/*large*/
+@media (min-width: 992px) and (max-width: 1199.98px){ 
+    .info-company {
+        margin: 2% 5% 4% 33%;
+    }
+
+    .btn-search {
+        width: 11%;
+    }
+
+    .container-exemplo{
+        margin-top: 2%;
+    }
+
+    .recharts-surface{
+        margin-left: 0;
+        width: 960px;
+    }
+
+    .recharts-wrapper {
+        margin: 2% auto 1% 18%;
+    }
+
+}
+
+/* medium */
+@media (min-width: 768px) and (max-width: 991.98px){
+    .info-company {
+        margin: 2% 5% 4% 26%;
+    }
+
+    .btn-search{
+        width: 15%;
+    }
+
+    .container-exemplo {
+        width: 80%;
+        padding: 1%;
+        margin: 10px 0 0 0;
+    }
+
+    .icone-exemplo {
+        font-size: 40px;
+        margin: 4%;
+    }
+
+    .recharts-surface{
+        margin-left: 0;
+        width: 660px;
+    }
+
+    .recharts-wrapper {
+        margin: 2% auto 1% 5%;
+    }
+}
+
+/* small */
+@media (min-width: 576px) and (max-width: 767.98px){
+    .info-company {
+        margin: 2% 5% 4% 14%;
+    }
+
+    .btn-search{
+        width: 15%;
+    }
+
+    .btn-search-text {
+        font-size: small;
+    }
+
+    .container-exemplo {
+        width: 80%;
+        padding: 4%;
+        margin: 10px 0 0 0;
+    }
+
+    .icone-exemplo {
+        font-size: 35px;
+        margin: 3%;
+    }
+
+    .recharts-wrapper {
+        margin: 2% auto 1% auto;
+    }
+
+    .recharts-surface {
+        margin-left: 0;
+        width: 560px;
+    }
+}
+
+/* extra small */
+@media (max-width: 575.98px){
+    .info-company {
+        margin: 2% 5% 4% 14%;
+        visibility:visible;
+    }
+
+    .btn-search{
+        width: 17%;
+    }
+
+    .btn-search-text {
+        font-size: small;
+    }
+
+    .container-exemplo {
+        width: 80%;
+        padding: 4%;
+        margin: 10px 0 0 0;
+    }
+
+    .icone-exemplo {
+        font-size: 35px;
+        margin: 3%;
+    }
+
+    .recharts-wrapper {
+        margin: 2% auto 1% auto;
+    }
+
+    .recharts-surface {
+        margin-left: 0;
+        width: 485px;
+        border: none;
+    }
 }
